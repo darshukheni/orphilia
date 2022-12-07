@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from orphilia.com/Services/SoftwareDevelopmentProcess by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Oct 2022 15:45:52 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <title>Software Development Process</title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/settings.css" rel="stylesheet" />
+    <link href="../Content/owl.carousel.css" rel="stylesheet" />
+    <link href="../Content/prettify.css" rel="stylesheet" />
+    <link href="../Content/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../Content/jquery.fancybox-thumbs0ff5.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/style.css" rel="stylesheet" />
+    <link href="../Content/color/orange.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900" rel='stylesheet'
+        type='text/css'>
+    <link href="../Content/fontello.css" rel="stylesheet" />
+    <link href="../Content/picons.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.10.2.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/bootstrap.min.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script type="c6fd0bc272d68cab65fce3a6-text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-82380125-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <style>
+        .circled li {
+            list-style-position: inside;
+            text-indent: -1em;
+            padding-left: 2em;
+        }
+
+        .notification {
+            background-color: #009afc;
+            border-radius: 4px 4px 0 0;
+            bottom: 0;
+            box-shadow: 0 0 10px -2px #3f3f3f;
+            height: 425px;
+            padding: 0;
+            position: fixed;
+            right: 10px;
+            text-align: center;
+            transition: all 0.5s ease 0s;
+            width: 270px;
+            z-index: 150;
+        }
+
+        .notificationtitle {
+            cursor: pointer;
+            display: block;
+            font-size: 17px;
+            letter-spacing: 2px;
+            line-height: 26px;
+            padding: 5px 0;
+        }
+
+        .notificationtitle p {
+            margin: 0;
+        }
+
+        .notification span {
+            /* background-color: #F58634; */
+            background-color: #000;
+            display: block;
+            float: right;
+            height: 3px;
+            position: absolute;
+            right: 20px;
+            top: 22px;
+            width: 17px;
+        }
+
+        .hide-chat {
+            height: 35px;
+            width: 220px;
+        }
+
+        .hide-chat span {
+            display: none;
+        }
+
+        .no-padding {
+            padding: 0;
+        }
+
+        .notification .highlight-button-black-border {
+            padding: 8px 20px;
+        }
+
+        .notification .highlight-button-black-border {
+            margin: 0;
+        }
+
+        .highlight-button-black-border {
+            background-color: transparent;
+            border: 2px solid #000;
+            border-radius: 8px 2px;
+            color: #000;
+            margin: 0 0 20px;
+            padding: 8px 20px;
+            text-transform: uppercase;
+            transition: all 0.5s ease 0s;
+        }
+
+        .btn {
+            border-radius: 0;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+
+        #_getquote {
+            /* background: #F58634 none repeat scroll 0 0; */
+            background: #009afc none repeat scroll 0 0;
+            color: #fff;
+            display: inline-block;
+            font-size: 13px;
+            left: -111px;
+            padding: 5px;
+            position: fixed;
+            top: 50%;
+            transition: all 0.3s ease 0s;
+            z-index: 1000;
+        }
+
+        #_getquote span {
+            border-right: 1px solid;
+            display: block;
+            float: left;
+            width: 105px;
+            font-size: 105%;
+            padding-left: 5%;
+        }
+
+        #_getquote .icon-link-ext {
+            float: left;
+            font-size: 35px;
+            padding-left: 10px;
+            padding-top: 8px;
+        }
+
+        #_getquote:hover {
+            left: 0;
+        }
+    </style>
+</head>
+
+<body class="full-layout">
+    <div class="body-wrapper">
+        <div class="yamm navbar basic fixed" style="display:block;">
+            <div class="navbar-header">
+                <div class="container">
+                    <div class="basic-wrapper"> <a class="btn responsive-menu pull-right" data-toggle="collapse"
+                            data-target=".navbar-collapse"><i class='icon-menu-1'></i></a> <a class="navbar-brand"
+                            href="../Home/Index.html"><img src="../images/logo.png" data-at2x="~/images/logo@2x.png"
+                                alt="" /></a> </div>
+                    <div class="collapse navbar-collapse pull-right">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="../Home/Index.html" class="">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/About.html" class="dropdown-toggle js-activated">About Orphilia</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../Home/About.html">Profile</a></li>
+                                    <li><a href="../Home/Why.html">Why Orphilia</a></li>
+                                    <!-- <li><a href="BusinessModels.html">Business Models</a></li> -->
+                                    <!-- <li><a href="PartnershipAndCooperation.html">Partnership & Cooperation</a></li> -->
+                                    <!-- <li><a href="SoftwareDevelopmentProcess.html">Process</a></li> -->
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/About.html" class="dropdown-toggle js-activated">Domains</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="UiUxDesigning.html">UI/UX Designing</a></li>
+                                    <li><a href="WebDevelopment.html">Web Development</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a href="MobileDevelopment.html">Mobile Development</a>
+                                        <ul class="dropdown-menu" style="display: none;">
+                                            <li><a href="IosAppDevelopment.html">iOS App Development</a></li>
+                                            <li><a href="AndroidAppDevelopment.html">Android App Development</a></li>
+                                            <li><a href="CrossPlatformMobileDevelopment.html">Cross-Platform
+                                                    Development</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li><a href="DynamicCRMServices.html">Dynamic Crm</a></li> -->
+                                    <!-- <li><a href="NavDynamicServices.html">Nav Dynamic Service</a></li> -->
+                                    <li><a href="EcommerceServices.html">E-Commerce Service</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm-fullwidth" style="font-family:Raleway">
+                                <!-- <a href="#" class="dropdown-toggle js-activated">Services</a> -->
+                                <ul class="dropdown-menu yamm-dropdown-menu">
+                                    <li>
+                                        <div class="yamm-content row" style="padding-bottom:0px">
+                                            <div class="col-sm-4">
+                                                <h4>Custom Software Applications</h4>
+                                                <p>We specialize in the development of custom software applications.
+                                                    Specifically, our company carries out custom programming, database
+                                                    design, client-server and internet/intranet software application
+                                                    development.</p>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="CustomSoftware.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>Enterprise Application Services</h4>
+                                                <p>Orphilia is experienced in enterprise software development. We are
+                                                    focuses on design and develop web solutions, ERP, HRM and CRM
+                                                    systems, and mobile applications for enterprises in different
+                                                    industry domains.</p>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="EnterpriseServices.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>Cloud Application Development</h4>
+                                                <p>We specialize in web application development for Cloud and Cloud
+                                                    Migration. Our team will help deploy your web products to Microsoft
+                                                    Azure and Amazon Elastic Compute Cloud (EC2).</p>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="CloudComputing.html">Read More</a>
+                                            </div>
+                                        </div>
+                                        <div class="yamm-content row" style="padding-top:0px">
+                                            <div class="col-sm-4">
+                                                <h4>Offshore Product Development</h4>
+                                                <p>Offshoring product development to Acodsoft helps independent software
+                                                    vendors, as well as software product development organizations
+                                                    including startups in freeing their valuable resources from
+                                                    development and concentrating on their core activities.</p>
+                                                <div class="divide2"></div>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="OffshoreDevelopment.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>IT Consulting</h4>
+                                                <p>Orphilia's dedicated consulting group offers integrated IT consulting
+                                                    services. We focus on engineering and IT support outsourcing
+                                                    services and help companies leverage information technology in the
+                                                    optimum way.</p>
+                                                <div class="divide2"></div>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="BusinessConsulting.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>Software Testing &amp; QA Services</h4>
+                                                <p>Orphilia has been providing high quality independent software testing
+                                                    outsourcing services over the half year to its customers worldwide.
+                                                </p>
+                                                <div class="divide2"></div>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="TestingService.html">Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/Career.html" class="">Career</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/Contact.html" class="dropdown-toggle js-activated">Contact</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../Home/Contact.html">Contact US</a></li>
+                                    <li>
+                                        <a href="PreProjectConsulting.html">
+                                            Pre-Project-
+                                            Consulting
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="../Scripts/js/jquery.easytabs.min.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+        <div class="offset"></div>
+        <div class="light-wrapper page-title">
+            <div class="container inner">
+                <h1>Software Development Process</h1>
+            </div>
+        </div>
+        <div class="col-sm-12 rp20">
+            <figure><img src="../images/SWProcess.jpg" /></figure>
+        </div>
+        <div class="divide25"></div>
+        <div class="row text-center col-services-2">
+            <div class="col-sm-3 col">
+                <div class="icon-border bm10"> <i class="icon-s-vimeo tab h1"></i> </div>
+                <h5 class="upper colored"><a href="AgileProcesses.html">WE PLAN FOR BUSINESS RESULTS</a></h5>
+                <p class="col-sm-offset-1">We start by coming to an agreement of how success will be measured. Then, we
+                    work to understand your current process, how people interact with the current systems and what they
+                    need to do better. From there, we create a project plan that’s tied directly with your needs and
+                    fits into your unique processes.</p>
+            </div>
+            <div class="col-sm-3 col">
+                <div class="icon-border bm10"> <i class="icon-user tabh1"></i> </div>
+                <h5 class="upper colored">WE DESIGN FOR YOUR USERS</h5>
+                <p class="col-sm-offset-1">
+                    With a custom software system, your customers and your employees are now your end-users. During the
+                    process of development, we’ll be engaging with them to ensure that we’re creating an experience
+                    that’s easy-to-use and accomplishes their goals quickly and effectively.
+                </p>
+            </div>
+            <div class="col-sm-3 col">
+                <div class="icon-border bm10"> <i class="icon-list-bullet tab h1"></i> </div>
+                <h5 class="upper colored">WE DELIVER FOR IMMEDIATE ROI</h5>
+                <p class="col-sm-offset-1">We know custom software isn't cheap, but we also know growing companies that
+                    employ tailor-made solutions have a unique competitive edge in their market. Our goal at the end of
+                    each project is to have you up and running on your new system quickly so you can start seeing a
+                    return on your investment.</p>
+            </div>
+            <div class="col-sm-3 col">
+                <div class="icon-border bm10"> <i class="icon-target-1 tab h1"></i> </div>
+                <h5 class="upper colored">WE MAINTAIN FOR LONG TERM SUCCESS</h5>
+                <p class="col-sm-offset-1">Software projects are rarely “done.” Most of the lifelong cost of a custom
+                    application is in the ongoing enhancements/maintenance and the infrastructure costs. Luckily, we’re
+                    with you for the long-haul. We’ll host, maintain and manage your system to keep it operating
+                    efficiently so you can see long-term cost savings and keep your system operational over a longer
+                    period of time.</p>
+            </div>
+        </div>
+        <div class="light-wrapper">
+            <div class="container inner">
+                <div class="section-title text-center bm20">
+                    <h2 class="upper">Our Development Process</h2>
+                    <span class="icon"><i class="icon-progress-1"></i></span>
+                </div>
+                <figure class="icon-overlay medium icn-link main"><img alt="Enterprise Applications"
+                        src="../images/art/ourProcess.png"></figure>
+            </div>
+        </div>
+        <div class="light-wrapper">
+            <div class="container inner">
+                <div class="tabs services tab-container">
+                    <div class="panel-container" style="">
+                        <div class="tab-block" id="tab-1" style="display: none; position: static; visibility: visible;">
+                            <h2 class="slab"><span class="colored">HOW CAN </span> WE HELP YOU?</h2>
+                            <p class="lead">When you come to us to talk about your software project, the first thing we
+                                do is listen. We learn about your business and your project in order to understand your
+                                development needs and to determine whether Orphilia is a good fit. If we think we can
+                                help you, we’ll work with you to develop a proposal.</p>
+                            <p class="lead"> The proposal serves as a high-level description of your software project’s
+                                features and a corresponding time and budget estimate. We use early project
+                                requirements, historical data from previous projects, and our expertise to initially
+                                estimate cost. At this point, the estimate will have the broadest range. As we learn
+                                more about the project, the estimate will be refined.</p>
+                        </div>
+
+                        <div class="tab-block" id="tab-2" style="position: static; visibility: visible; display: none;">
+                            <h2 class="slab">FORGET ACRONYMS.<span class="colored"> WE START IN ENGLISH.</span></h2>
+                            <p class="lead">Your project starts long before we write any code. Coding focuses on
+                                technologies and languages, but preparing for a software project involves the larger
+                                process of understanding your business and goals, your users, constraints, risks and
+                                future opportunities. We’ll do this collaboratively through discussion, sketching out
+                                workflows, and deciding on solutions. The best part of all is that we don’t require you
+                                to learn our language; we communicate in yours.</p>
+                            <p class="lead">Once we understand the problem and agree on the right solution, we’ll define
+                                the features that support the core application and create an accurate cost and schedule
+                                estimate for your software project.</p>
+                        </div>
+
+                        <div class="tab-block active" id="tab-3"
+                            style="position: static; visibility: visible; display: block;">
+                            <h2 class="slab"><span class="colored">CREATING YOUR</span> PRODUCT</h2>
+                            <p class="lead">All of our design and development practices are aimed at producing
+                                maintainable, extensible, and highly usable software. We begin with the most essential
+                                features, so we deliver the most value early-on in the process.</p>
+                            <p class="lead">We build your custom software incrementally, one fully-tested and
+                                fleshed-out feature at a time, rather than creating many incomplete features all at
+                                once. We add new value to the project at each iteration. Our test-driven development
+                                ensures that software is always well-designed and fully tested.</p>
+                        </div>
+
+                        <div class="tab-block" id="tab-4" style="position: static; visibility: visible; display: none;">
+                            <h2 class="slab">THE EASY<span class="colored"> STUFF</span></h2>
+                            <p class="lead">All of your software project’s artifacts are stored in a version control
+                                system. We have a disciplined and tested backup procedure. Our backups are stored both
+                                locally and offsite. Our continuous integration servers are always watching your
+                                project, building and running all the tests on every change.</p>
+                        </div>
+
+                    </div>
+
+                    <ul class="etabs row">
+                        <li class="tab col-sm-3">
+                            <a href="#tab-1" class="">
+                                <div class="pin"></div>
+                                <div class="root"></div>
+                                <div class="icon"><i class="icon-box icn"></i></div>
+                                <h4>CONSULTING</h4>
+                            </a>
+                        </li>
+                        <li class="tab col-sm-3">
+                            <a href="#tab-2" class="">
+                                <div class="pin"></div>
+                                <div class="root"></div>
+                                <div class="icon"><i class="icon-picons-bulb icn"></i></div>
+                                <h4>RESEARCH, DESIGN, PLANNING</h4>
+                            </a>
+                        </li>
+                        <li class="tab col-sm-3 active">
+                            <a href="#tab-3" class="active">
+                                <div class="pin"></div>
+                                <div class="root"></div>
+                                <div class="icon"><i class="icon-picons-lab icn"></i></div>
+                                <h4>DEVELOPMENT</h4>
+                            </a>
+                        </li>
+                        <li class="tab col-sm-3">
+                            <a href="#tab-4" class="">
+                                <div class="pin"></div>
+                                <div class="root"></div>
+                                <div class="icon"><i class="icon-picons-rocket icn"></i></div>
+                                <h4>RELEASE & SUPPORT</h4>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+        <footer class="black-wrapper">
+            <div class="container inner">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="widget">
+                            <div class="divide20"></div>
+                            <p>Orphilia Solutions is an custom software development company specializes in developing
+                                scalable software applications, business softwares and automation softwares. We
+                                primarily develop softwares and applications which automates everyday workflow of a
+                                company or organization and makes life easier.</p>
+                            <p>We offer services of entire software development,web designing, web development, mobile
+                                application development (android & ios) and Content Management Solutions from the very
+                                beginning until the end.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="widget">
+                            <h3 class="section-title widget-title upper">Services</h3>
+                            <ul class="post-list">
+                                <li>
+                                    <h6><a href="CustomSoftware.html">Custom Software Applications</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="EnterpriseServices.html">Enterprise Application Services</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="CloudComputing.html">Cloud Application Development</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="OffshoreDevelopment.html">Offshore Product Development</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="BusinessConsulting.html">IT Consulting</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="TestingService.html">Software Testing &amp; QA Services</a></h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="widget">
+                            <h3 class="section-title widget-title upper">Get In Touch</h3>
+                            <p>We are here to answer any questions you may have about your IT reuirements. Reach out to
+                                us and we will respond as soon as we can.</p>
+                            <div class="divide10"></div>
+                            <div class="contact-info" style="font-family:sans-serif">
+                                <i class="icon-location"></i>62, Bhavani, Nagar Matawadi, L.H.Road, Surat -
+                                369005.<br />
+                                <i class="icon-mail"></i>
+                                <abbr title="Email">Email:</abbr><a href="mailto:connect@orphilia.com"> connect@orphilia.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="sub-footer">
+                <div class="container">
+                    <p class="pull-left">© 2022 <a href="../index.html"> Orphilia Solutions</a>. All rights reserved.
+                    </p>
+                    <ul class="footer-menu pull-right">
+                        <li><a href="../Home/Index.html">Home</a></li>
+                        <li><a href="../Home/About.html">About Us</a></li>
+                        <li><a href="../Home/Why.html">Why Us</a></li>
+                        <!-- <li><a href="../Home/Services.html">Services</a></li> -->
+                        <li><a href="../Privacy/Quiznary.html">Quiznary Privacy Policy</a></li>
+                        <li><a href="../Home/Career.html">Career</a></li>
+                        <li><a href="../Home/Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="../Home/RequestForQuotation.html" target="_blank" id="_getquote" data-target=""><span>Request A Proposal</span><i class="icon-link-ext"></i></a>
+            <!-- <div class="notification hide-chat">
+                <div class="notificationtitle">
+                    <p>Leave a message</p><span></span>
+                </div>
+                <link href="../Content/Notification.css" rel="stylesheet" />
+                <script data-cfasync="false"
+                    src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                <script src="../Scripts/jquery.validate.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+                <script src="../Scripts/jquery-validate.bootstrap-tooltip.js"
+                    type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+                <script src="../Scripts/notify/pnotify.core.js"
+                    type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+                <style>
+                    .modal-dialog {
+                        top: 50%;
+                    }
+                </style>
+                <div class="col-xs-12 no-padding">
+                    <form action="https://orphilia.com/" class="" enctype="multipart/form-data" id="frmContactChat"
+                        method="post">
+                        <div style="position: relative; display: inline-block; width: 100%; padding-top:10px;"
+                            id="loader">
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input class="text-input required" id="Name" name="Name" placeholder="Name (Required)"
+                                    type="text" value="" />
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input class="text-input required" id="Email" name="Email"
+                                    placeholder="Email No (Required)" type="text" value="" />
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input class="text-input" id="Mobile" name="Mobile" placeholder="Contact No" type="text"
+                                    value="" />
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <textarea class="text-input required" cols="20" id="Description" name="Description"
+                                    placeholder="Message (Required)" rows="2"></textarea>
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input id="btnSubmitContactPop" type="submit" value="Send" name="submit"
+                                    class="btn btn-submit bm0" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <script type="c6fd0bc272d68cab65fce3a6-text/javascript">
+    $(document).ready(function () {
+
+        $('#frmContactChat').validate({
+            rules: {
+                Name: {
+                    required: true
+                },
+                Email: {
+                    required: true,
+                    email: true,
+                },
+                Mobile: {
+                    number: true,
+                    minlength: 10,
+                    maxlength: 16
+                },
+                Description: {
+                    required: true
+                }
+
+            },
+            messages: {
+                Name: {
+                    required: 'Name required.'
+                },
+                Email: {
+                    required: 'Email required.',
+                    email: "Enter valid Email."
+                },
+                Mobile: {
+                    number: "Enter number only.",
+                    minlength: "Number should be min. 10 digits.",
+                    maxlength: "Number should be max. 16 digits.",
+                },
+                Description: {
+                    required: 'Description required.'
+                },
+            },
+            tooltip_options: {
+
+                Name: { placement: 'top' },
+                Email: { placement: 'top' },
+                Mobile: { placement: 'top' },
+                Description: { placement: 'top' }
+
+            },
+            submitHandler: function (form) {
+                $('#btnSubmitContactPop').val('Sending...');
+                var fd = new FormData();
+                var other_data = $('#frmContactChat').serializeArray();
+                $.each(other_data, function (key, input) {
+                    fd.append(input.name, input.value);
+                });
+                $.ajax({
+                    url: '/Home/SendContactDetails',
+                    contentType: false,
+                    processData: false,
+                    type: 'POST',
+                    data: fd,
+                    dataType: "json",
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function (data) {
+                        if (data.Key) {
+                            $("#Name").val('');
+                            $("#Email").val('');
+                            $("#Mobile").val('');
+                            $("#Description").val('');
+                            new PNotify({
+                                text: "Thank you for contact with us. We will contact you as soon as possible.",
+                                delay: 1000,
+                                type: 'success'
+                            });
+                        }
+                        else {
+                            new PNotify({
+                                text: "Error! Please try after some time to submit your contact details.",
+                                delay: 1000,
+                                type: 'error'
+                            });
+
+                        }
+                        $('.notification').toggleClass('hide-chat');
+                        $('#btnSubmitContactPop').val('Send');
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        new PNotify({
+                            text: "Error! Please try after some time to submit your contact details.",
+                            delay: 1000,
+                            type: 'error'
+                        });
+                        $('.notification').toggleClass('hide-chat');
+                        $('#btnSubmitContactPop').val('Send');
+                    }
+                });
+            },
+            errorPlacement: function (error, element) {
+                if (element.is(':radio') || element.is(':checkbox'))
+                    error.appendTo(element.parent().parent());
+                else if (element.is(':password'))
+                    error.hide();
+                else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+    });
+</script>
+            </div> -->
+        </footer>
+
+    </div>
+    <script src="../Scripts/js/twitter-bootstrap-hover-dropdown.min.js"
+        type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/jquery.themepunch.plugins.min.js"
+        type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/jquery.themepunch.revolution.min.js"
+        type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/jquery.fancybox.pack.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/fancybox/helpers/jquery.fancybox-thumbs0ff50ff5.js?v=1.0.2"
+        type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/fancybox/helpers/jquery.fancybox-mediae209e209.js?v=1.0.0"
+        type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/jquery.isotope.min.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/jquery.easytabs.min.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/owl.carousel.min.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/jquery.fitvids.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/jquery.sticky.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/google-code-prettify/prettify.js"
+        type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/jquery.slickforms.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/js/scripts.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script src="../Scripts/switchstylesheet.js" type="c6fd0bc272d68cab65fce3a6-text/javascript"></script>
+    <script type="c6fd0bc272d68cab65fce3a6-text/javascript">
+        $(document).ready(function () {
+            $(".changecolor").switchstylesheet({ seperator: "color" });
+            $('.notificationtitle').on('click', function () {
+                $('.notification').toggleClass('hide-chat');
+            });
+        });
+    </script>
+    <script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="c6fd0bc272d68cab65fce3a6-|49" defer=""></script>
+</body>
+
+<!-- Mirrored from orphilia.com/Services/SoftwareDevelopmentProcess by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Oct 2022 15:45:53 GMT -->
+
+</html>

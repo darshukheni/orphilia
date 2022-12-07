@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from orphilia.com/Services/CloudComputing by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Oct 2022 15:45:59 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <title>Cloud Application Development</title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/settings.css" rel="stylesheet" />
+    <link href="../Content/owl.carousel.css" rel="stylesheet" />
+    <link href="../Content/prettify.css" rel="stylesheet" />
+    <link href="../Content/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../Content/jquery.fancybox-thumbs0ff5.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/style.css" rel="stylesheet" />
+    <link href="../Content/color/orange.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900" rel='stylesheet'
+        type='text/css'>
+    <link href="../Content/fontello.css" rel="stylesheet" />
+    <link href="../Content/picons.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.10.2.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/bootstrap.min.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script type="8eefcc3f491ba824404d0189-text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-82380125-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <style>
+        .circled li {
+            list-style-position: inside;
+            text-indent: -1em;
+            padding-left: 2em;
+        }
+
+        .notification {
+            background-color: #ffffff;
+            border-radius: 4px 4px 0 0;
+            bottom: 0;
+            box-shadow: 0 0 10px -2px #3f3f3f;
+            height: 425px;
+            padding: 0;
+            position: fixed;
+            right: 10px;
+            text-align: center;
+            transition: all 0.5s ease 0s;
+            width: 270px;
+            z-index: 150;
+        }
+
+        .notificationtitle {
+            cursor: pointer;
+            display: block;
+            font-size: 17px;
+            letter-spacing: 2px;
+            line-height: 26px;
+            padding: 5px 0;
+        }
+
+        .notificationtitle p {
+            margin: 0;
+        }
+
+        .notification span {
+            /* background-color: #F58634; */
+            background-color: #000;
+            display: block;
+            float: right;
+            height: 3px;
+            position: absolute;
+            right: 20px;
+            top: 22px;
+            width: 17px;
+        }
+
+        .hide-chat {
+            height: 35px;
+            width: 220px;
+        }
+
+        .hide-chat span {
+            display: none;
+        }
+
+        .no-padding {
+            padding: 0;
+        }
+
+        .notification .highlight-button-black-border {
+            padding: 8px 20px;
+        }
+
+        .notification .highlight-button-black-border {
+            margin: 0;
+        }
+
+        .highlight-button-black-border {
+            background-color: transparent;
+            border: 2px solid #000;
+            border-radius: 8px 2px;
+            color: #000;
+            margin: 0 0 20px;
+            padding: 8px 20px;
+            text-transform: uppercase;
+            transition: all 0.5s ease 0s;
+        }
+
+        .btn {
+            border-radius: 0;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+
+        #_getquote {
+            /* background: #F58634 none repeat scroll 0 0; */
+            background: #000 none repeat scroll 0 0;
+            color: #fff;
+            display: inline-block;
+            font-size: 13px;
+            left: -111px;
+            padding: 5px;
+            position: fixed;
+            top: 50%;
+            transition: all 0.3s ease 0s;
+            z-index: 1000;
+        }
+
+        #_getquote span {
+            border-right: 1px solid;
+            display: block;
+            float: left;
+            width: 105px;
+            font-size: 105%;
+            padding-left: 5%;
+        }
+
+        #_getquote .icon-link-ext {
+            float: left;
+            font-size: 35px;
+            padding-left: 10px;
+            padding-top: 8px;
+        }
+
+        #_getquote:hover {
+            left: 0;
+        }
+    </style>
+</head>
+
+<body class="full-layout">
+    <div class="body-wrapper">
+        <div class="yamm navbar basic fixed" style="display:block;">
+            <div class="navbar-header">
+                <div class="container">
+                    <div class="basic-wrapper"> <a class="btn responsive-menu pull-right" data-toggle="collapse"
+                            data-target=".navbar-collapse"><i class='icon-menu-1'></i></a> <a class="navbar-brand"
+                            href="../Home/Index.html"><img src="../images/logo.png" data-at2x="~/images/logo@2x.png"
+                                alt="" /></a> </div>
+                    <div class="collapse navbar-collapse pull-right">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="../Home/Index.html" class="">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/About.html" class="dropdown-toggle js-activated">About Orphilia</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../Home/About.html">Profile</a></li>
+                                    <li><a href="../Home/Why.html">Why Orphilia</a></li>
+                                    <!-- <li><a href="BusinessModels.html">Business Models</a></li> -->
+                                    <!-- <li><a href="PartnershipAndCooperation.html">Partnership & Cooperation</a></li> -->
+                                    <!-- <li><a href="SoftwareDevelopmentProcess.html">Process</a></li> -->
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/About.html" class="dropdown-toggle js-activated">Domains</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="UiUxDesigning.html">UI/UX Designing</a></li>
+                                    <li><a href="WebDevelopment.html">Web Development</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a href="MobileDevelopment.html">Mobile Development</a>
+                                        <ul class="dropdown-menu" style="display: none;">
+                                            <li><a href="IosAppDevelopment.html">iOS App Development</a></li>
+                                            <li><a href="AndroidAppDevelopment.html">Android App Development</a></li>
+                                            <li><a href="CrossPlatformMobileDevelopment.html">Cross-Platform
+                                                    Development</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li><a href="DynamicCRMServices.html">Dynamic Crm</a></li> -->
+                                    <!-- <li><a href="NavDynamicServices.html">Nav Dynamic Service</a></li> -->
+                                    <li><a href="EcommerceServices.html">E-Commerce Service</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm-fullwidth" style="font-family:Raleway">
+                                <a href="#" class="dropdown-toggle js-activated">Services</a>
+                                <ul class="dropdown-menu yamm-dropdown-menu">
+                                    <li>
+                                        <div class="yamm-content row" style="padding-bottom:0px">
+                                            <div class="col-sm-4">
+                                                <h4>Custom Software Applications</h4>
+                                                <p>We specialize in the development of custom software applications.
+                                                    Specifically, our company carries out custom programming, database
+                                                    design, client-server and internet/intranet software application
+                                                    development.</p>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="CustomSoftware.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>Enterprise Application Services</h4>
+                                                <p>Orphilia is experienced in enterprise software development. We are
+                                                    focuses on design and develop web solutions, ERP, HRM and CRM
+                                                    systems, and mobile applications for enterprises in different
+                                                    industry domains.</p>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="EnterpriseServices.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>Cloud Application Development</h4>
+                                                <p>We specialize in web application development for Cloud and Cloud
+                                                    Migration. Our team will help deploy your web products to Microsoft
+                                                    Azure and Amazon Elastic Compute Cloud (EC2).</p>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="CloudComputing.html">Read More</a>
+                                            </div>
+                                        </div>
+                                        <div class="yamm-content row" style="padding-top:0px">
+                                            <div class="col-sm-4">
+                                                <h4>Offshore Product Development</h4>
+                                                <p>Offshoring product development to Acodsoft helps independent software
+                                                    vendors, as well as software product development organizations
+                                                    including startups in freeing their valuable resources from
+                                                    development and concentrating on their core activities.</p>
+                                                <div class="divide2"></div>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="OffshoreDevelopment.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>IT Consulting</h4>
+                                                <p>Orphilia's dedicated consulting group offers integrated IT consulting
+                                                    services. We focus on engineering and IT support outsourcing
+                                                    services and help companies leverage information technology in the
+                                                    optimum way.</p>
+                                                <div class="divide2"></div>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="BusinessConsulting.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>Software Testing &amp; QA Services</h4>
+                                                <p>Orphilia has been providing high quality independent software testing
+                                                    outsourcing services over the half year to its customers worldwide.
+                                                </p>
+                                                <div class="divide2"></div>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="TestingService.html">Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/Career.html" class="">Career</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/Contact.html" class="dropdown-toggle js-activated">Contact</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../Home/Contact.html">Contact US</a></li>
+                                    <li>
+                                        <a href="PreProjectConsulting.html">
+                                            Pre-Project-
+                                            Consulting
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="offset" style="padding-top: 59.4px;"></div>
+        <div class="light-wrapper page-title">
+            <div class="container inner">
+                <h1 class="pull-left">Cloud Application Development</h1>
+            </div>
+        </div>
+        <div class="dark-wrapper">
+            <div style="margin-left:3.5%">
+                <div class="row">
+                    <div class="col-sm-10 content">
+                        <div class="classic-blog single">
+                            <div class="post format-image">
+                                <figure class="icon-overlay medium icn-link main"><img alt="Enterprise Applications"
+                                        src="../images/art/CloudApplication.jpg"></figure>
+                                <div class="post-content image-caption"
+                                    style="font-size:120%;line-height:1.6;font-family:'Segoe UI';color:#444">
+                                    <p>Developing and deploying applications on the cloud requires careful assessment
+                                        and planning for security, scalability, capacity and integration with other
+                                        on-premise or cloud applications.</p>
+                                    <p>Whether you need a web or service cloud application; accessed via mobile devices,
+                                        desktop app or a browser; our cloud application architects and developers will
+                                        help steer your cloud application development initiatives in the right
+                                        direction. We can help in selecting the right type of cloud (public, private or
+                                        hybrid); choice of platform (such as Windows Azure, Amazon); help develop new or
+                                        migrate existing applications; and post-deployment help you manage your
+                                        application and infrastructure.</p>
+                                    <h2 class="post-title">Our cloud app development services include: </h2>
+                                    <div class="divide10"></div>
+                                    <h3 style="color: #666;">User Experience Design </h3>
+                                    <p>Cloud, social, and mobile apps era necessitates a fresh look at the way we design
+                                        software. We are passionate about designing apps that are simple, elegant and
+                                        easy to use.</p>
+                                    <h3 style="color:#666">Rapid App Development</h3>
+                                    <p>We design and develop apps ground-up for the cloud, not just cloud
+                                        deployment-ready. We design and develop modular and scalable software embracing
+                                        design patterns, agile programming standards, and latest experience-centric
+                                        frameworks. We deliver a shippable product every two weeks.</p>
+                                    <h3 style="color:#666">Saas on Cloud</h3>
+                                    <p>By leveraging the software-as-a service (SaaS) model, small and midsize
+                                        enterprises can dramatically accelerate time to value. Our cloud-based solutions
+                                        offer minimal disruption and reduce the risk and complexity preventing you from
+                                        changing gears when growth opportunities lie ahead.</p>
+                                    <ul class="circled">
+                                        <li>Thorough evaluation of products and applications for Cloud</li>
+                                        <li>Deployment of software products development on Cloud</li>
+                                        <li>Widget realization and device abstraction</li>
+                                    </ul>
+                                    <h3 style="color:#666">Cloud Hosting &amp; Continuous Deployment</h3>
+                                    <p>Hosting world-class business websites or email on cloud transcends to a higher
+                                        level with our advanced state-of-the-art infrastructure and comprehensive
+                                        knowledge of technical experts. Our services are designed to optimize uptime,
+                                        increase security, and improve performance.</p>
+                                    <p>We are ardent followers of the continuous delivery principles. Our continuous
+                                        delivery framework brings together core functional components enabling seamless
+                                        integration across agile project management, distributed version control,
+                                        continuous integration, and release automation.</p>
+                                    <h3 class="post-title">Orphilia works with two leading Cloud providers – Amazon and
+                                        Azure. We provide the services of the highest quality and we are always ready to
+                                        share some advice on what suits each of our customers best.</h3>
+                                    <div class="divide30"></div>
+                                    <div class="latest-blog-wrapper">
+                                        <div class="latest-blog isotope"
+                                            style="position: relative; overflow: hidden; height:450px ">
+                                            <div class="post isotope-item"
+                                                style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <figure class="icon-overlay medium icn-link"><img alt=""
+                                                                src="../images/art/amazon.png"></figure>
+                                                    </div>
+                                                    <div class="post-content col-sm-8">
+                                                        <h3 class="post-title">Amazon Web Services</h3>
+                                                        <div class="divide5"></div>
+                                                        <p>Amazon Web Services is a bundled remote computing service
+                                                            that provides cloud computing infrastructure over the
+                                                            Internet with storage, bandwidth and customized support for
+                                                            application programming interfaces (API).</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post isotope-item"
+                                                style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <figure class="icon-overlay medium icn-link"><img alt=""
+                                                                src="../images/art/azure.png"></figure>
+                                                    </div>
+                                                    <div class="post-content col-sm-8">
+                                                        <h3 class="post-title">Windows Azure Cloud Application</h3>
+                                                        <div class="divide5"></div>
+                                                        <p>Windows Azure is an open and flexible cloud platform that
+                                                            enables you to quickly build, deploy and manage applications
+                                                            across a global network of Microsoft-managed datacenters.
+                                                            You can build applications using any language, tool or
+                                                            framework. And you can integrate your public applications
+                                                            with your existing environment.</p>
+                                                    </div>
+                                                </div>
+                                                <br /><br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="divide15"></div>
+                                    <h3 class="post-title">Implementing new technologies means always being one step
+                                        ahead. Cloud computing is persistently gaining popularity, and there are solid
+                                        reasons for that :</h3>
+                                    <div class="divide15"></div>
+                                    <h3 style="color:#666">Mobility</h3>
+                                    <p>Working in the Cloud means always keeping your hand on the pulse. Today, when
+                                        remote teams are common practice and the pace of our lives is fast as never
+                                        before, we always need to be ready to react, wherever we are.</p>
+                                    <h3 style="color:#666">Flexibility</h3>
+                                    <p>Using remote servers enables to meet the company’s growing demands faster and
+                                        with more convenience. The capacity of these servers is much higher, as they are
+                                        independent from the hardware and can be easily adjusted</p>
+                                    <h3 style="color:#666">Team collaboration</h3>
+                                    <p>Always being in sync saves time and therefore increases productivity. Working in
+                                        the cloud provides a common environment where everyone has a chance to
+                                        participate, and receive updates instantly.</p>
+                                    <h3 style="color:#666">Security</h3>
+                                    <p>Cloud computing provides unprecedented fraud- and theft-protection of your data
+                                        because of the inability to access your equipment. Your data will always be
+                                        safe, even if something happens to your computers or devices.</p>
+                                    <h3 style="color:#666">Disaster recovery</h3>
+                                    <p>Cloud computing providers take care of the technical issues. The company can
+                                        spend up to four times less time and money on technical support and disaster
+                                        recovery plans.</p>
+                                    <div class="divide15"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="col-sm-2 sidebar lp30">
+                        <div class="sidebox widget">
+                            <div class="divide50"></div>
+                            <h3>Other Services</h3>
+                            <ul class="post-list">
+                                <li>
+                                    <h6><a href="CustomSoftware.html">Custom Software <br>Applications</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="EnterpriseServices.html">Enterprise Application <br>Services</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="OffshoreDevelopment.html">Offshore Product<br> Development</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="BusinessConsulting.html">IT Consulting</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="TestingService.html">Software Testing & <br>QA Services</a></h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <footer class="black-wrapper">
+            <div class="container inner">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="widget">
+                            <div class="divide20"></div>
+                            <p>Orphilia Solutions is an custom software development company specializes in developing
+                                scalable software applications, business softwares and automation softwares. We
+                                primarily develop softwares and applications which automates everyday workflow of a
+                                company or organization and makes life easier.</p>
+                            <p>We offer services of entire software development,web designing, web development, mobile
+                                application development (android & ios) and Content Management Solutions from the very
+                                beginning until the end.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="widget">
+                            <h3 class="section-title widget-title upper">Services</h3>
+                            <ul class="post-list">
+                                <li>
+                                    <h6><a href="CustomSoftware.html">Custom Software Applications</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="EnterpriseServices.html">Enterprise Application Services</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="CloudComputing.html">Cloud Application Development</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="OffshoreDevelopment.html">Offshore Product Development</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="BusinessConsulting.html">IT Consulting</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="TestingService.html">Software Testing &amp; QA Services</a></h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="widget">
+                            <h3 class="section-title widget-title upper">Get In Touch</h3>
+                            <p>We are here to answer any questions you may have about your IT reuirements. Reach out to
+                                us and we will respond as soon as we can.</p>
+                            <div class="divide10"></div>
+                            <div class="contact-info" style="font-family:sans-serif">
+                                <i class="icon-location"></i>62, Bhavani, Nagar Matawadi, L.H.Road, Surat -
+                                369005.<br />
+                                <i class="icon-mail"></i>
+                                <abbr title="Email">Email:</abbr><a href="mailto:connect@orphilia.com"> connect@orphilia.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="sub-footer">
+                <div class="container">
+                    <p class="pull-left">© 2022 <a href="../index.html"> Orphilia Solutions</a>. All rights reserved.
+                    </p>
+                    <ul class="footer-menu pull-right">
+                        <li><a href="../Home/Index.html">Home</a></li>
+                        <li><a href="../Home/About.html">About Us</a></li>
+                        <li><a href="../Home/Why.html">Why Us</a></li>
+                        <li><a href="../Home/Services.html">Services</a></li>
+                        <li><a href="../Privacy/Quiznary.html">Quiznary Privacy Policy</a></li>
+                        <li><a href="../Home/Career.html">Career</a></li>
+                        <li><a href="../Home/Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="../Home/RequestForQuotation.html" target="_blank" id="_getquote" data-target=""><span>Request A Proposal</span><i class="icon-link-ext"></i></a>
+            <!-- <div class="notification hide-chat">
+                <div class="notificationtitle">
+                    <p>Leave a message</p><span></span>
+                </div>
+                <link href="../Content/Notification.css" rel="stylesheet" />
+                <script data-cfasync="false"
+                    src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                <script src="../Scripts/jquery.validate.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+                <script src="../Scripts/jquery-validate.bootstrap-tooltip.js"
+                    type="8eefcc3f491ba824404d0189-text/javascript"></script>
+                <script src="../Scripts/notify/pnotify.core.js"
+                    type="8eefcc3f491ba824404d0189-text/javascript"></script>
+                <style>
+                    .modal-dialog {
+                        top: 50%;
+                    }
+                </style>
+                <div class="col-xs-12 no-padding">
+                    <form action="https://orphilia.com/" class="" enctype="multipart/form-data" id="frmContactChat"
+                        method="post">
+                        <div style="position: relative; display: inline-block; width: 100%; padding-top:10px;"
+                            id="loader">
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input class="text-input required" id="Name" name="Name" placeholder="Name (Required)"
+                                    type="text" value="" />
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input class="text-input required" id="Email" name="Email"
+                                    placeholder="Email No (Required)" type="text" value="" />
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input class="text-input" id="Mobile" name="Mobile" placeholder="Contact No" type="text"
+                                    value="" />
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <textarea class="text-input required" cols="20" id="Description" name="Description"
+                                    placeholder="Message (Required)" rows="2"></textarea>
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input id="btnSubmitContactPop" type="submit" value="Send" name="submit"
+                                    class="btn btn-submit bm0" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <script type="8eefcc3f491ba824404d0189-text/javascript">
+    $(document).ready(function () {
+
+        $('#frmContactChat').validate({
+            rules: {
+                Name: {
+                    required: true
+                },
+                Email: {
+                    required: true,
+                    email: true,
+                },
+                Mobile: {
+                    number: true,
+                    minlength: 10,
+                    maxlength: 16
+                },
+                Description: {
+                    required: true
+                }
+
+            },
+            messages: {
+                Name: {
+                    required: 'Name required.'
+                },
+                Email: {
+                    required: 'Email required.',
+                    email: "Enter valid Email."
+                },
+                Mobile: {
+                    number: "Enter number only.",
+                    minlength: "Number should be min. 10 digits.",
+                    maxlength: "Number should be max. 16 digits.",
+                },
+                Description: {
+                    required: 'Description required.'
+                },
+            },
+            tooltip_options: {
+
+                Name: { placement: 'top' },
+                Email: { placement: 'top' },
+                Mobile: { placement: 'top' },
+                Description: { placement: 'top' }
+
+            },
+            submitHandler: function (form) {
+                $('#btnSubmitContactPop').val('Sending...');
+                var fd = new FormData();
+                var other_data = $('#frmContactChat').serializeArray();
+                $.each(other_data, function (key, input) {
+                    fd.append(input.name, input.value);
+                });
+                $.ajax({
+                    url: '/Home/SendContactDetails',
+                    contentType: false,
+                    processData: false,
+                    type: 'POST',
+                    data: fd,
+                    dataType: "json",
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function (data) {
+                        if (data.Key) {
+                            $("#Name").val('');
+                            $("#Email").val('');
+                            $("#Mobile").val('');
+                            $("#Description").val('');
+                            new PNotify({
+                                text: "Thank you for contact with us. We will contact you as soon as possible.",
+                                delay: 1000,
+                                type: 'success'
+                            });
+                        }
+                        else {
+                            new PNotify({
+                                text: "Error! Please try after some time to submit your contact details.",
+                                delay: 1000,
+                                type: 'error'
+                            });
+
+                        }
+                        $('.notification').toggleClass('hide-chat');
+                        $('#btnSubmitContactPop').val('Send');
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        new PNotify({
+                            text: "Error! Please try after some time to submit your contact details.",
+                            delay: 1000,
+                            type: 'error'
+                        });
+                        $('.notification').toggleClass('hide-chat');
+                        $('#btnSubmitContactPop').val('Send');
+                    }
+                });
+            },
+            errorPlacement: function (error, element) {
+                if (element.is(':radio') || element.is(':checkbox'))
+                    error.appendTo(element.parent().parent());
+                else if (element.is(':password'))
+                    error.hide();
+                else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+    });
+</script>
+            </div> -->
+        </footer>
+
+    </div>
+    <script src="../Scripts/js/twitter-bootstrap-hover-dropdown.min.js"
+        type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/jquery.themepunch.plugins.min.js"
+        type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/jquery.themepunch.revolution.min.js"
+        type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/jquery.fancybox.pack.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/fancybox/helpers/jquery.fancybox-thumbs0ff50ff5.js?v=1.0.2"
+        type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/fancybox/helpers/jquery.fancybox-mediae209e209.js?v=1.0.0"
+        type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/jquery.isotope.min.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/jquery.easytabs.min.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/owl.carousel.min.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/jquery.fitvids.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/jquery.sticky.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/google-code-prettify/prettify.js"
+        type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/jquery.slickforms.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/js/scripts.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script src="../Scripts/switchstylesheet.js" type="8eefcc3f491ba824404d0189-text/javascript"></script>
+    <script type="8eefcc3f491ba824404d0189-text/javascript">
+        $(document).ready(function () {
+            $(".changecolor").switchstylesheet({ seperator: "color" });
+            $('.notificationtitle').on('click', function () {
+                $('.notification').toggleClass('hide-chat');
+            });
+        });
+    </script>
+    <script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="8eefcc3f491ba824404d0189-|49" defer=""></script>
+</body>
+
+<!-- Mirrored from orphilia.com/Services/CloudComputing by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Oct 2022 15:45:59 GMT -->
+
+</html>

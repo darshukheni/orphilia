@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from orphilia.com/Services/DynamicCRMServices by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Oct 2022 15:45:57 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <title>DynamicCRMServices</title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/settings.css" rel="stylesheet" />
+    <link href="../Content/owl.carousel.css" rel="stylesheet" />
+    <link href="../Content/prettify.css" rel="stylesheet" />
+    <link href="../Content/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../Content/jquery.fancybox-thumbs0ff5.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/style.css" rel="stylesheet" />
+    <link href="../Content/color/orange.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900" rel='stylesheet'
+        type='text/css'>
+    <link href="../Content/fontello.css" rel="stylesheet" />
+    <link href="../Content/picons.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.10.2.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/bootstrap.min.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script type="afef52eaeb530d72d7340747-text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-82380125-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <style>
+        .circled li {
+            list-style-position: inside;
+            text-indent: -1em;
+            padding-left: 2em;
+        }
+
+        .notification {
+            background-color: #ffffff;
+            border-radius: 4px 4px 0 0;
+            bottom: 0;
+            box-shadow: 0 0 10px -2px #3f3f3f;
+            height: 425px;
+            padding: 0;
+            position: fixed;
+            right: 10px;
+            text-align: center;
+            transition: all 0.5s ease 0s;
+            width: 270px;
+            z-index: 150;
+        }
+
+        .notificationtitle {
+            cursor: pointer;
+            display: block;
+            font-size: 17px;
+            letter-spacing: 2px;
+            line-height: 26px;
+            padding: 5px 0;
+        }
+
+        .notificationtitle p {
+            margin: 0;
+        }
+
+        .notification span {
+            /* background-color: #F58634; */
+            background-color: #000;
+            display: block;
+            float: right;
+            height: 3px;
+            position: absolute;
+            right: 20px;
+            top: 22px;
+            width: 17px;
+        }
+
+        .hide-chat {
+            height: 35px;
+            width: 220px;
+        }
+
+        .hide-chat span {
+            display: none;
+        }
+
+        .no-padding {
+            padding: 0;
+        }
+
+        .notification .highlight-button-black-border {
+            padding: 8px 20px;
+        }
+
+        .notification .highlight-button-black-border {
+            margin: 0;
+        }
+
+        .highlight-button-black-border {
+            background-color: transparent;
+            border: 2px solid #000;
+            border-radius: 8px 2px;
+            color: #000;
+            margin: 0 0 20px;
+            padding: 8px 20px;
+            text-transform: uppercase;
+            transition: all 0.5s ease 0s;
+        }
+
+        .btn {
+            border-radius: 0;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+
+        #_getquote {
+            /* background: #F58634 none repeat scroll 0 0; */
+            background: #000 none repeat scroll 0 0;
+            color: #fff;
+            display: inline-block;
+            font-size: 13px;
+            left: -111px;
+            padding: 5px;
+            position: fixed;
+            top: 50%;
+            transition: all 0.3s ease 0s;
+            z-index: 1000;
+        }
+
+        #_getquote span {
+            border-right: 1px solid;
+            display: block;
+            float: left;
+            width: 105px;
+            font-size: 105%;
+            padding-left: 5%;
+        }
+
+        #_getquote .icon-link-ext {
+            float: left;
+            font-size: 35px;
+            padding-left: 10px;
+            padding-top: 8px;
+        }
+
+        #_getquote:hover {
+            left: 0;
+        }
+    </style>
+</head>
+
+<body class="full-layout">
+    <div class="body-wrapper">
+        <div class="yamm navbar basic fixed" style="display:block;">
+            <div class="navbar-header">
+                <div class="container">
+                    <div class="basic-wrapper"> <a class="btn responsive-menu pull-right" data-toggle="collapse"
+                            data-target=".navbar-collapse"><i class='icon-menu-1'></i></a> <a class="navbar-brand"
+                            href="../Home/Index.html"><img src="../images/logo.png" data-at2x="~/images/logo@2x.png"
+                                alt="" /></a> </div>
+                    <div class="collapse navbar-collapse pull-right">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="../Home/Index.html" class="">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/About.html" class="dropdown-toggle js-activated">About Orphilia</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../Home/About.html">Profile</a></li>
+                                    <li><a href="../Home/Why.html">Why Orphilia</a></li>
+                                    <!-- <li><a href="BusinessModels.html">Business Models</a></li> -->
+                                    <!-- <li><a href="PartnershipAndCooperation.html">Partnership & Cooperation</a></li> -->
+                                    <!-- <li><a href="SoftwareDevelopmentProcess.html">Process</a></li> -->
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/About.html" class="dropdown-toggle js-activated">Domains</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="UiUxDesigning.html">UI/UX Designing</a></li>
+                                    <li><a href="WebDevelopment.html">Web Development</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a href="MobileDevelopment.html">Mobile Development</a>
+                                        <ul class="dropdown-menu" style="display: none;">
+                                            <li><a href="IosAppDevelopment.html">iOS App Development</a></li>
+                                            <li><a href="AndroidAppDevelopment.html">Android App Development</a></li>
+                                            <li><a href="CrossPlatformMobileDevelopment.html">Cross-Platform
+                                                    Development</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li><a href="DynamicCRMServices.html">Dynamic Crm</a></li> -->
+                                    <!-- <li><a href="NavDynamicServices.html">Nav Dynamic Service</a></li> -->
+                                    <li><a href="EcommerceServices.html">E-Commerce Service</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm-fullwidth" style="font-family:Raleway">
+                                <a href="#" class="dropdown-toggle js-activated">Services</a>
+                                <ul class="dropdown-menu yamm-dropdown-menu">
+                                    <li>
+                                        <div class="yamm-content row" style="padding-bottom:0px">
+                                            <div class="col-sm-4">
+                                                <h4>Custom Software Applications</h4>
+                                                <p>We specialize in the development of custom software applications.
+                                                    Specifically, our company carries out custom programming, database
+                                                    design, client-server and internet/intranet software application
+                                                    development.</p>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="CustomSoftware.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>Enterprise Application Services</h4>
+                                                <p>Orphilia is experienced in enterprise software development. We are
+                                                    focuses on design and develop web solutions, ERP, HRM and CRM
+                                                    systems, and mobile applications for enterprises in different
+                                                    industry domains.</p>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="EnterpriseServices.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>Cloud Application Development</h4>
+                                                <p>We specialize in web application development for Cloud and Cloud
+                                                    Migration. Our team will help deploy your web products to Microsoft
+                                                    Azure and Amazon Elastic Compute Cloud (EC2).</p>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="CloudComputing.html">Read More</a>
+                                            </div>
+                                        </div>
+                                        <div class="yamm-content row" style="padding-top:0px">
+                                            <div class="col-sm-4">
+                                                <h4>Offshore Product Development</h4>
+                                                <p>Offshoring product development to Acodsoft helps independent software
+                                                    vendors, as well as software product development organizations
+                                                    including startups in freeing their valuable resources from
+                                                    development and concentrating on their core activities.</p>
+                                                <div class="divide2"></div>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="OffshoreDevelopment.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>IT Consulting</h4>
+                                                <p>Orphilia's dedicated consulting group offers integrated IT consulting
+                                                    services. We focus on engineering and IT support outsourcing
+                                                    services and help companies leverage information technology in the
+                                                    optimum way.</p>
+                                                <div class="divide2"></div>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="BusinessConsulting.html">Read More</a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4>Software Testing &amp; QA Services</h4>
+                                                <p>Orphilia has been providing high quality independent software testing
+                                                    outsourcing services over the half year to its customers worldwide.
+                                                </p>
+                                                <div class="divide2"></div>
+                                                <a class="btn" style="font-size:10px;padding:4px;"
+                                                    href="TestingService.html">Read More</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/Career.html" class="">Career</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../Home/Contact.html" class="dropdown-toggle js-activated">Contact</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../Home/Contact.html">Contact US</a></li>
+                                    <li>
+                                        <a href="PreProjectConsulting.html">
+                                            Pre-Project-
+                                            Consulting
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="offset"></div>
+        <div class="light-wrapper page-title">
+            <div class="container inner">
+                <h1>Microsoft Dynamics CRM</h1>
+            </div>
+        </div>
+        <div class="col-sm-12 rp20">
+            <figure><img src="../images/crm.jpg" /></figure>
+        </div>
+        <div class="divide10"></div>
+        <div class="section-title text-center">
+            <h2 class="upper">Microsoft Dynamics CRM</h2>
+            <span class="icon"><i class="icon-cog-1"></i></span>
+            <div class="tab-container" id="" data-easytabs="true">
+                <div class="panel-container">
+                    <div id="tst1" class="row">
+                        <div class="col-sm-10 col-md-offset-1" style="font-size:18px;">
+                            MetaOption LLC is a renowned Microsoft Dynamics CRM Development Company, which provides a
+                            series of Microsoft Enterprise Software Solutions to business enterprises & organizations,
+                            working in different corners of the globe. The Microsoft Dynamics CRM software has been
+                            designed as a complete Customer Relationship Management package with features for managing
+                            customers, vendors, suppliers, and partners effectively. The Dynamics CRM package is
+                            available as CRM Online, On-Premise and Partner Hosted solution so that you can stay
+                            connected with your business and client needs to foster loyalty and strong customer
+                            relationships.
+                        </div>
+                    </div>
+                    <div class="divide20"></div>
+                    <div id="tst1" class="row">
+                        <div class="col-sm-10 col-md-offset-1" style="font-size:18px;">
+                            Leverage the integrated features of Dynamics CRM solutions to keep your customers front and
+                            center of your business. The Dynamics CRM approach to customer relationship management with
+                            MetaOption LLC is to sustain lasting Client-Customer relationship that will positively
+                            impact your bottom-line through continual service engagement.
+                        </div>
+                    </div>
+                    <div class="divide20"></div>
+                </div>
+            </div>
+            <div class="dark-wrapper">
+                <div class="container inner">
+                    <div class="section-title text-center">
+                        <h2 class="upper">What We Do:</h2>
+                        <span class="icon"><i class="icon-cog-1"></i></span>
+                        <div class="col-sm-12 col-md-offset-0" style="font-size:16px;">
+                            We implement Microsoft Dynamics CRM for SMB, large enterprises, and public sector groups.
+                            Our services for new and pre-installed Dynamics CRM applications include the following:
+                        </div>
+                    </div>
+                    <div class="col-services">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-offset-0">
+                                <div class="text">
+                                    <h3 class="upper">MS CRM OFFERING</h3>
+                                    <h5>Capacity planning and MS CRM fitment</h5>
+                                    <ul class="circled">
+                                        <li>Physical and logical architecture assessment</li>
+                                        <li>Licensing recommendations</li>
+                                        <li>AS IS-TO BE fit gap analysis</li>
+                                    </ul>
+                                    <h5>Solution building and implementation services</h5>
+                                    <ul class="circled">
+                                        <li>MS CRM end-to-end solution building and implementation</li>
+                                        <li>Microsoft Dynamics CRM configuration, customizations, and role-based
+                                            security definitions</li>
+                                        <li>Workflow configuration to connect your business use case</li>
+                                        <li>Implementation of Cybage add-on or reusable components solutions</li>
+                                    </ul>
+                                    <h5>xRM development</h5>
+                                    <ul class="circled">
+                                        <li>Extending MS CRM platform for business solution applications</li>
+                                    </ul>
+                                    <h5>Unidirectional, bidirectional system integration</h5>
+                                    <ul class="circled">
+                                        <li>Integration with ERP using standard and custom Cybage connector</li>
+                                        <li>Integration with non-ERP systems using ESB or custom Cybage connector</li>
+                                        <li>Integration with websites and portals</li>
+                                        <li>Integration with telephony systems and contact center agent desktops</li>
+                                    </ul>
+                                    <h5>Version upgrades</h5>
+                                    <ul class="circled">
+                                        <li>Implementation of upgrades</li>
+                                        <li>Add-on upgrades</li>
+                                        <li>Installation of roll-ups</li>
+                                    </ul>
+                                    <h5>Helpdesk and support services</h5>
+                                    <ul class="circled">
+                                        <li>Dedicated offshore support: Team of technical and functional consultants
+                                            providing centralized support to globally distributed clients</li>
+                                        <li>Dedicated onsite support: Technical or functional consultants deployed at
+                                            the client site, when needed</li>
+                                        <li>On-going server management and performance auditing</li>
+                                        <li>Functional and technical performance management</li>
+                                        <li>Remote assistance (via VPN or remote desktop)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-offset-0">
+                                <div class="text">
+                                    <h3 class="upper">SPECIALIZED SERVICES</h3>
+                                    <h5>Data migration and BI</h5>
+                                    <ul class="circled">
+                                        <li>Extraction of data from heterogeneous data sources and its transformation to
+                                            match target schema</li>
+                                        <li>Handling migration error handling and logging</li>
+                                        <li>Migration performance tracking</li>
+                                        <li>Data migration from legacy or other CRM systems</li>
+                                        <li>Usage of connectors to reduce migration time frame</li>
+                                        <li>Customized reporting based on external and internal data</li>
+                                        <li>Building dynamic, ad hoc reporting solutions</li>
+                                        <li>Enhancing dashboards and role centers including custom Microsoft SQL Server
+                                            Reporting</li>
+                                    </ul>
+                                    <h5>Installation and deployment</h5>
+                                    <ul class="circled">
+                                        <li>Internet-facing deployment</li>
+                                        <li>Single server, multi-server deployment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-offset-0">
+                                <div class="text">
+                                    <h3 class="upper">SPECIALIZED SOLUTIONS</h3>
+                                    <h5>Re-usable components and tools usage</h5>
+                                    <ul class="circled">
+                                        <li>Pre-built error handling mechanism</li>
+                                        <li>Email racking solutions</li>
+                                        <li>Translations and localization</li>
+                                        <li>Robust logging framework</li>
+                                        <li>Grid designer</li>
+                                        <li>Printing framework</li>
+                                        <li>Auto-numbering</li>
+                                        <li>Third-party tools usage to reduce implementation time frame</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divide10"></div>
+            <div class="parallax contact">
+                <div class="container inner">
+                    <div class="section-title text-center bm20">
+                        <h2 class="upper">Cybage Microsoft Dynamics CRM expertise and experience</h2>
+                        <span class="icon"><i class="icon-magic"></i></span>
+                        <div class="col-sm-12 rp20">
+                            <figure><img src="../images/MS%20CRM%20Experience-01.jpg" /></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="black-wrapper">
+            <div class="container inner">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="widget">
+                            <div class="divide20"></div>
+                            <p>Orphilia Solutions is an custom software development company specializes in developing
+                                scalable software applications, business softwares and automation softwares. We
+                                primarily develop softwares and applications which automates everyday workflow of a
+                                company or organization and makes life easier.</p>
+                            <p>We offer services of entire software development,web designing, web development, mobile
+                                application development (android & ios) and Content Management Solutions from the very
+                                beginning until the end.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="widget">
+                            <h3 class="section-title widget-title upper">Services</h3>
+                            <ul class="post-list">
+                                <li>
+                                    <h6><a href="CustomSoftware.html">Custom Software Applications</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="EnterpriseServices.html">Enterprise Application Services</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="CloudComputing.html">Cloud Application Development</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="OffshoreDevelopment.html">Offshore Product Development</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="BusinessConsulting.html">IT Consulting</a></h6>
+                                </li>
+                                <li>
+                                    <h6><a href="TestingService.html">Software Testing &amp; QA Services</a></h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="widget">
+                            <h3 class="section-title widget-title upper">Get In Touch</h3>
+                            <p>We are here to answer any questions you may have about your IT reuirements. Reach out to
+                                us and we will respond as soon as we can.</p>
+                            <div class="divide10"></div>
+                            <div class="contact-info" style="font-family:sans-serif">
+                                <i class="icon-location"></i>62, Bhavani, Nagar Matawadi, L.H.Road, Surat -
+                                369005.<br />
+                                <i class="icon-mail"></i>
+                                <abbr title="Email">Email:</abbr><a href="mailto:connect@orphilia.com"> connect@orphilia.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="sub-footer">
+                <div class="container">
+                    <p class="pull-left">© 2022 <a href="../index.html"> Orphilia Solutions</a>. All rights reserved.
+                    </p>
+                    <ul class="footer-menu pull-right">
+                        <li><a href="../Home/Index.html">Home</a></li>
+                        <li><a href="../Home/About.html">About Us</a></li>
+                        <li><a href="../Home/Why.html">Why Us</a></li>
+                        <li><a href="../Home/Services.html">Services</a></li>
+                        <li><a href="../Privacy/Quiznary.html">Quiznary Privacy Policy</a></li>
+                        <li><a href="../Home/Career.html">Career</a></li>
+                        <li><a href="../Home/Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="../Home/RequestForQuotation.html" target="_blank" id="_getquote" data-target=""><span>Request A Proposal</span><i class="icon-link-ext"></i></a>
+            <!-- <div class="notification hide-chat">
+                <div class="notificationtitle">
+                    <p>Leave a message</p><span></span>
+                </div>
+                <link href="../Content/Notification.css" rel="stylesheet" />
+                <script data-cfasync="false"
+                    src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                <script src="../Scripts/jquery.validate.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+                <script src="../Scripts/jquery-validate.bootstrap-tooltip.js"
+                    type="afef52eaeb530d72d7340747-text/javascript"></script>
+                <script src="../Scripts/notify/pnotify.core.js"
+                    type="afef52eaeb530d72d7340747-text/javascript"></script>
+                <style>
+                    .modal-dialog {
+                        top: 50%;
+                    }
+                </style>
+                <div class="col-xs-12 no-padding">
+                    <form action="https://orphilia.com/" class="" enctype="multipart/form-data" id="frmContactChat"
+                        method="post">
+                        <div style="position: relative; display: inline-block; width: 100%; padding-top:10px;"
+                            id="loader">
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input class="text-input required" id="Name" name="Name" placeholder="Name (Required)"
+                                    type="text" value="" />
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input class="text-input required" id="Email" name="Email"
+                                    placeholder="Email No (Required)" type="text" value="" />
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input class="text-input" id="Mobile" name="Mobile" placeholder="Contact No" type="text"
+                                    value="" />
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <textarea class="text-input required" cols="20" id="Description" name="Description"
+                                    placeholder="Message (Required)" rows="2"></textarea>
+                            </div>
+                            <div class="col-xs-12" style="margin-bottom: 0px ! important;">
+                                <input id="btnSubmitContactPop" type="submit" value="Send" name="submit"
+                                    class="btn btn-submit bm0" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <script type="afef52eaeb530d72d7340747-text/javascript">
+    $(document).ready(function () {
+
+        $('#frmContactChat').validate({
+            rules: {
+                Name: {
+                    required: true
+                },
+                Email: {
+                    required: true,
+                    email: true,
+                },
+                Mobile: {
+                    number: true,
+                    minlength: 10,
+                    maxlength: 16
+                },
+                Description: {
+                    required: true
+                }
+
+            },
+            messages: {
+                Name: {
+                    required: 'Name required.'
+                },
+                Email: {
+                    required: 'Email required.',
+                    email: "Enter valid Email."
+                },
+                Mobile: {
+                    number: "Enter number only.",
+                    minlength: "Number should be min. 10 digits.",
+                    maxlength: "Number should be max. 16 digits.",
+                },
+                Description: {
+                    required: 'Description required.'
+                },
+            },
+            tooltip_options: {
+
+                Name: { placement: 'top' },
+                Email: { placement: 'top' },
+                Mobile: { placement: 'top' },
+                Description: { placement: 'top' }
+
+            },
+            submitHandler: function (form) {
+                $('#btnSubmitContactPop').val('Sending...');
+                var fd = new FormData();
+                var other_data = $('#frmContactChat').serializeArray();
+                $.each(other_data, function (key, input) {
+                    fd.append(input.name, input.value);
+                });
+                $.ajax({
+                    url: '/Home/SendContactDetails',
+                    contentType: false,
+                    processData: false,
+                    type: 'POST',
+                    data: fd,
+                    dataType: "json",
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function (data) {
+                        if (data.Key) {
+                            $("#Name").val('');
+                            $("#Email").val('');
+                            $("#Mobile").val('');
+                            $("#Description").val('');
+                            new PNotify({
+                                text: "Thank you for contact with us. We will contact you as soon as possible.",
+                                delay: 1000,
+                                type: 'success'
+                            });
+                        }
+                        else {
+                            new PNotify({
+                                text: "Error! Please try after some time to submit your contact details.",
+                                delay: 1000,
+                                type: 'error'
+                            });
+
+                        }
+                        $('.notification').toggleClass('hide-chat');
+                        $('#btnSubmitContactPop').val('Send');
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        new PNotify({
+                            text: "Error! Please try after some time to submit your contact details.",
+                            delay: 1000,
+                            type: 'error'
+                        });
+                        $('.notification').toggleClass('hide-chat');
+                        $('#btnSubmitContactPop').val('Send');
+                    }
+                });
+            },
+            errorPlacement: function (error, element) {
+                if (element.is(':radio') || element.is(':checkbox'))
+                    error.appendTo(element.parent().parent());
+                else if (element.is(':password'))
+                    error.hide();
+                else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+    });
+</script>
+            </div> -->
+        </footer>
+
+    </div>
+    <script src="../Scripts/js/twitter-bootstrap-hover-dropdown.min.js"
+        type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/jquery.themepunch.plugins.min.js"
+        type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/jquery.themepunch.revolution.min.js"
+        type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/jquery.fancybox.pack.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/fancybox/helpers/jquery.fancybox-thumbs0ff50ff5.js?v=1.0.2"
+        type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/fancybox/helpers/jquery.fancybox-mediae209e209.js?v=1.0.0"
+        type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/jquery.isotope.min.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/jquery.easytabs.min.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/owl.carousel.min.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/jquery.fitvids.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/jquery.sticky.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/google-code-prettify/prettify.js"
+        type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/jquery.slickforms.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/js/scripts.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script src="../Scripts/switchstylesheet.js" type="afef52eaeb530d72d7340747-text/javascript"></script>
+    <script type="afef52eaeb530d72d7340747-text/javascript">
+        $(document).ready(function () {
+            $(".changecolor").switchstylesheet({ seperator: "color" });
+            $('.notificationtitle').on('click', function () {
+                $('.notification').toggleClass('hide-chat');
+            });
+        });
+    </script>
+    <script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="afef52eaeb530d72d7340747-|49" defer=""></script>
+</body>
+
+<!-- Mirrored from orphilia.com/Services/DynamicCRMServices by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Oct 2022 15:45:57 GMT -->
+
+</html>
